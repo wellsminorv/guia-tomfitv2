@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMFIT | Guia Clínico e Biomecânico</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --accent: #ff4500; /* Laranja forte para destaque */
+            --accent-light: #ff6a33;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000000 0%, var(--card-bg) 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+
+        h1 span {
+            color: var(--accent);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--accent);
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border-left: 4px solid var(--accent);
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(255, 69, 0, 0.2);
+            color: var(--accent-light);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .alert {
+            background-color: rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .section-title { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TOM<span>FIT</span></h1>
+        <div class="subtitle">Guia Clínico e Biomecânico de Bolso</div>
+    </header>
+
+    <div class="container">
+
+        <!-- SESSÃO 1: AVALIAÇÃO -->
+        <h2 class="section-title">🔍 1. Avaliação do Aluno do Futuro</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Membros Superiores</span>
+                <h3>Wall Slide Test</h3>
+                <p><strong>Objetivo:</strong> Avaliar encurtamento de peitoral e mobilidade torácica/ombros.</p>
+                <p><strong>Execução:</strong> Costas, glúteo, calcanhar e nuca na parede. Deslizar braços a 90º para cima.</p>
+                <div class="alert"><strong>Falha Clínica:</strong> Lombar descola (arco) ou punhos apontam para frente (peitoral puxando).</div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Quadril</span>
+                <h3>Teste de Thomas</h3>
+                <p><strong>Objetivo:</strong> Identificar qual flexor do quadril está encurtado.</p>
+                <p><strong>Execução:</strong> Deitar na ponta do banco, abraçar um joelho contra o peito. Perna oposta relaxada.</p>
+                <div class="alert"><strong>Falha Iliopsoas:</strong> Coxa levanta do banco.<br><strong>Falha Reto Femoral:</strong> Joelho estende (não cai a 90º).</div>
+            </div>
+
+            <div class="card">
+                <span class="tag">Tornozelo</span>
+                <h3>Lunge Test</h3>
+                <p><strong>Objetivo:</strong> Avaliar dorsiflexão para agachamento seguro.</p>
+                <p><strong>Execução:</strong> Pé a 10cm da parede. Tocar o joelho na parede sem tirar o calcanhar.</p>
+                <div class="alert"><strong>Falha Clínica:</strong> Calcanhar levanta ou joelho sofre valgo dinâmico (cai para dentro).</div>
+            </div>
+        </div>
+
+        <!-- SESSÃO 2: CORREÇÃO -->
+        <h2 class="section-title">🛠️ 2. Protocolo de Correção (Liberar & Ativar)</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Torácica & Ombros</span>
+                <h3>Correção Postural</h3>
+                <ul>
+                    <li><strong>1. Liberar:</strong> Alongamento de Peitoral Menor no batente (braço a 90º).</li>
+                    <li><strong>2. Ativar:</strong> Exercício Y-W. Esmagar escápulas para baixo para acordar Romboides e Trapézio Inferior.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <span class="tag">Quadril</span>
+                <h3>Correção Pélvica</h3>
+                <ul>
+                    <li><strong>1. Liberar:</strong> Couch Stretch (Alongamento no banco). Destrava Iliopsoas e Reto Femoral.</li>
+                    <li><strong>2. Ativar:</strong> Ponte de Glúteo (Glute Bridge). Foco puro em contração do glúteo máximo sem usar lombar.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SESSÃO 3: BIOMECÂNICA -->
+        <h2 class="section-title">📐 3. Inteligência Articular & Alavancas</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="tag">Isolamento</span>
+                <h3>Cadeira Extensora</h3>
+                <p>Obrigatória no treino. O Reto Femoral é biarticular e não fadiga totalmente no Leg/Hack. A extensora isola o movimento e gera o pico máximo de tensão (maior braço de momento a 90º).</p>
+            </div>
+
+            <div class="card">
+                <span class="tag">Manipulação de Força</span>
+                <h3>Hack Machine vs. Leg 45</h3>
+                <p>Fazer ambos no mesmo dia com a mesma pisada é <strong>Volume Lixo</strong>.</p>
+                <ul>
+                    <li><strong>Hack (Pés baixos):</strong> Joelho avança. Maior braço de momento no joelho = <strong>Foco nos Vastos</strong>.</li>
+                    <li><strong>Leg 45 (Pés altos):</strong> Flexão de quadril aumenta. Maior braço de momento no quadril = <strong>Foco em Glúteos/Posteriores</strong>.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Desenvolvido com a metodologia MTOR para <strong>Coach Tom</strong>.<br>
+        O músculo não reconhece o peso, reconhece o Torque.
+    </div>
+
+</body>
+</html>
